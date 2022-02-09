@@ -18,7 +18,7 @@ export const GuessedModal = memo(({ guessCount, open, handleClose }: Props) => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} autoFocus>
+                <Button onClick={handleClose}>
                     Start new game!
                 </Button>
             </DialogActions>
