@@ -21,7 +21,7 @@ export const isStringUnique = (numberString: string): boolean => {
     return new Set(numberString).size === numberString.length;
 }
 
-const compare = (codeArray: number[], inputString: string): Result[] => {
+export const compareAnswer = (codeArray: number[], inputString: string): Result[] => {
     const inputArray: number[] = inputString.split('').map(Number);
 
     return inputArray.map((n, i) => {

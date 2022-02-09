@@ -5,7 +5,8 @@ import { selectInput } from '../../redux/guess/selectors';
 import { useDisplayResult } from './hook';
 
 export const DisplayResult = memo(() => {
-    const { userNumber } = useDisplayResult()
+    const { userNumber, result } = useDisplayResult()
+    console.log('result', result)
 
     return (
         <Box>

@@ -13,8 +13,8 @@ export const actionsGuessGame = {
         type: ActionsGuessGame.StartNewGame,
     } as const),
 
-    setInput: (payload: string) => ({
-        type: ActionsGuessGame.SetInput,
+    guess: (payload: string) => ({
+        type: ActionsGuessGame.Guess,
         payload,
     } as const),
 };
