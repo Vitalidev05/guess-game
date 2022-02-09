@@ -21,9 +21,9 @@ export const DisplayResult = memo(() => {
                         key={value}
                         sx={styles.container}
                     >
-                        {isGuess && !isRightPosition && <Dot color="dark" />}
-                        {isRightPosition && <Dot color="light" />}
-                        {!isGuess && !isRightPosition && <Dot color="transparent" />}
+                        {isGuess && !isRightPosition && <Dot variant="dark" />}
+                        {isRightPosition && <Dot variant="light" />}
+                        {!isGuess && !isRightPosition && <Dot variant="transparent" />}
                         <Typography variant="h1">{value}</Typography>
                     </Box>
                 ))}

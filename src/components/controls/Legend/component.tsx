@@ -8,11 +8,11 @@ export const Legend = memo(({ legend1, legend2 }: Props) => {
     return (
         <Box sx={styles.root}>
             <Typography variant="h6">
-                <Dot color="dark" />
+                <Dot variant="dark" />
                 {legend1}
             </Typography>
             <Typography variant="h6">
-                <Dot color="light" />
+                <Dot variant="light" />
                 {legend2}
             </Typography>
         </Box>

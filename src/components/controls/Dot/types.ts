@@ -1,3 +1,3 @@
 export type Props = {
-    color: string,
+    variant: 'dark' | 'light' | 'transparent',
 }
