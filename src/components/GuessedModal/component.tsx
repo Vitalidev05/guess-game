@@ -2,10 +2,9 @@ import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogT
 import React, { memo, useState } from 'react';
 import { Props } from './types'
 
-export const GuessedModal = memo(({ guessCount, fullScreen, open, handleClose }: Props) => {
+export const GuessedModal = memo(({ guessCount, open, handleClose }: Props) => {
     return (
         <Dialog
-            fullScreen={fullScreen}
             open={open}
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
