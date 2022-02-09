@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import { Box, Button } from '@mui/material';
-import { DisplayResult } from '../DisplayResult';
-import { NumericInput } from '../NumericInput';
+import { DisplayResult } from '../../components/DisplayResult';
+import { NumericInput } from '../../components/controls/NumericInput';
 import { useModal } from './hook';
-import { GuessedModal } from '../GuessedModal';
-import { Title } from '../Title';
-import { Legend } from '../Legend/component';
+import { GuessedModal } from '../../components/GuessedModal';
+import { Title } from '../../components/controls/Title';
+import { Legend } from '../../components/controls/Legend';
 
 export const GuessGame = memo(() => {
     const modal = useModal()
@@ -17,18 +17,21 @@ export const GuessGame = memo(() => {
                 legend1=" - right number, wrong position"
                 legend2=" - right number, right position"
             />
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                mt: 6,
-                flexDirection: { xs: 'column', sm: 'row' },
-                alignItems: 'center',
-            }}
+            {/* todo separate style */}
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    mt: 6,
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: 2,
+                }}
             >
-                <Box sx={{ flex: 1 }}>
+                <Box>
                     <NumericInput />
                 </Box>
-                <Box sx={{ flex: 1 }}>
+                <Box>
                     <DisplayResult />
                 </Box>
             </Box>

@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectInput } from '../../redux/guess/selectors';
 import { useDisplayResult } from './hook';
-import { Dot } from '../Dot';
+import { Dot } from '../controls/Dot';
 
 export const DisplayResult = memo(() => {
     const { userNumber, result, code, isGuessed } = useDisplayResult();
@@ -11,13 +11,16 @@ export const DisplayResult = memo(() => {
 
     return (
         <Box>
-            <Typography variant="h5">Result:</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Typography variant="h5">Result:</Typography>
+            </Box>
+
             <Box sx={{
                 border: '1px solid black',
                 borderRadius: 3,
                 minHeight: 150,
                 display: 'flex',
-                minWidth: 200,
+                minWidth: { xs: 200, sm: 300 },
                 maxWidth: 300,
                 justifyContent: 'space-between',
                 px: 3,
@@ -42,6 +45,5 @@ export const DisplayResult = memo(() => {
                 ))}
             </Box>
         </Box>
-
     );
 });

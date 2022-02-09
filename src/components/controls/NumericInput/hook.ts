@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
-import { isNumeric, isStringUnique } from '../../const/helpers'
-import { actionsGuessGame } from '../../redux/guess/actions'
+import { isNumeric, isStringUnique } from '../../../const/helpers'
+import { actionsGuessGame } from '../../../redux/guess/actions'
 
 export const useNumericInput = () => {
   const [value, setValue] = useState<string>('')
