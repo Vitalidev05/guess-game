@@ -7,6 +7,6 @@ export enum ActionsGuessGame {
     Guess = '@/GUESS_GAME/GUESS',
 };
 
-export interface AppState {
+export type AppState = {
     guessGame: State,
 };
