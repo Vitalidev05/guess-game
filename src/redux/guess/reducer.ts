@@ -19,6 +19,9 @@ export const guessGameReducer = (state: State = initialState, action: GuessGameA
         case ActionsGuessGame.IncrementGuessCount: {
             return { ...state, guessCount: state.guessCount + 1 }
         }
+        case ActionsGuessGame.StartNewGame: {
+            return { ...state, guessCount: 0, input: '', code: []}
+        }
         default: return state;
     }
 };
