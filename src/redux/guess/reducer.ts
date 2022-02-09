@@ -11,7 +11,7 @@ const generateInitialState = (code: number[]) => ({
     result: [],
 })
 
-const initialState = generateInitialState(generateRandomNumbers())
+export const initialState = generateInitialState(generateRandomNumbers())
 
 export type State = typeof initialState
 export type GuessGameAnyAction = ReturnAnyActions<typeof actionsGuessGame>
