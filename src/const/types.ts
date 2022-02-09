@@ -1,0 +1,4 @@
+type PropActions<T> = T extends { [key: string]: infer R } ? R : never
+export type ReturnAnyActions<T extends { [key: string]: (...args: any[]) => any }> = ReturnType<
+    PropActions<T>
+    >
