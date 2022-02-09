@@ -24,6 +24,9 @@ export const guessGameReducer = (state: State = initialState, action: GuessGameA
         case ActionsGuessGame.StartNewGame: {
             return { ...state, guessCount: 0, input: '', code: generateRandomNumbers()}
         }
+        case ActionsGuessGame.SetInput: {
+            return { ...state, input: action.payload }
+        }
         default: return state;
     }
 };

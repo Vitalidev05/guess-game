@@ -12,4 +12,9 @@ export const actionsGuessGame = {
     startNewGame: () => ({
         type: ActionsGuessGame.StartNewGame,
     } as const),
+
+    setInput: (payload: string) => ({
+        type: ActionsGuessGame.SetInput,
+        payload,
+    } as const),
 };
