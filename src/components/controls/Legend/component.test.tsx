@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {Legend} from "../Legend";
+import {Legend} from "./index";
 
 test('renders Legend component', () => {
     render(<Legend legend1='legend1' legend2='legend2'/>);

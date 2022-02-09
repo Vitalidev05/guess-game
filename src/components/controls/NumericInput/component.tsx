@@ -18,6 +18,7 @@ export const NumericInput = memo(() => {
                 variant="outlined"
                 value={value}
             />
+            {/* todo separate value.length */}
             <Button disabled={value.length !== 4} onClick={guess} variant="contained">
                 Guess
             </Button>

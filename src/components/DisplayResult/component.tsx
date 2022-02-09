@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectInput } from '../../redux/guess/selectors';
 import { useDisplayResult } from './hook';
-import { Dot } from '../Dot';
+import { Dot } from '../controls/Dot';
 
 export const DisplayResult = memo(() => {
     const { userNumber, result, code, isGuessed } = useDisplayResult();
@@ -42,6 +42,5 @@ export const DisplayResult = memo(() => {
                 ))}
             </Box>
         </Box>
-
     );
 });
