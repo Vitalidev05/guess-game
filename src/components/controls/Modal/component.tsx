@@ -2,7 +2,7 @@ import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogT
 import React, { memo, useState } from 'react';
 import { Props } from './types'
 
-export const GuessedModal = memo(({ guessCount, open, handleClose }: Props) => {
+export const Modal = memo(({ open, handleClose, title, body, actionText }: Props) => {
     return (
         <Dialog
             open={open}
@@ -10,16 +10,16 @@ export const GuessedModal = memo(({ guessCount, open, handleClose }: Props) => {
             aria-labelledby="responsive-dialog-title"
         >
             <DialogTitle id="responsive-dialog-title">
-                You won!
+                {title}
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    number of guesses: {' '}{guessCount}
+                    {body}
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose}>
-                    Start new game!
+                    {actionText}
                 </Button>
             </DialogActions>
         </Dialog>

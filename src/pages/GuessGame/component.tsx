@@ -3,12 +3,12 @@ import { Box, Button } from '@mui/material';
 import { DisplayResult } from '../../components/DisplayResult';
 import { NumericInput } from '../../components/controls/NumericInput';
 import { useModal } from './hook';
-import { GuessedModal } from '../../components/GuessedModal';
+import { Modal } from '../../components/controls/Modal';
 import { Title } from '../../components/controls/Title';
 import { Legend } from '../../components/controls/Legend';
 
 export const GuessGame = memo(() => {
-    const modal = useModal()
+    const { open, handleClose, body } = useModal()
 
     return (
         <Box sx={{ p: 3 }}>
@@ -17,7 +17,6 @@ export const GuessGame = memo(() => {
                 legend1=" - right number, wrong position"
                 legend2=" - right number, right position"
             />
-            {/* todo separate style */}
             <Box
                 sx={{
                     display: 'flex',
@@ -37,13 +36,18 @@ export const GuessGame = memo(() => {
             </Box>
 
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: 6 }}>
-                <Button onClick={() => modal.handleClose()} variant="outlined">
+                <Button onClick={() => handleClose()} variant="outlined">
                     Start new game!
                 </Button>
             </Box>
 
-
-            <GuessedModal {...modal} />
+            <Modal
+                body={body}
+                title="You won!"
+                actionText="start new game"
+                handleClose={handleClose}
+                open={open}
+            />
         </Box>
     );
 });

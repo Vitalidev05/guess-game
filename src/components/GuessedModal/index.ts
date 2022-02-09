@@ -1,1 +1,0 @@
-export { GuessedModal } from './component'

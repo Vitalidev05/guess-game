@@ -1,5 +1,8 @@
 export type Props = {
     open: boolean,
-    guessCount: number,
     handleClose: () => void,
+    title: string,
+    body: string,
+    actionText: string;
 }
+

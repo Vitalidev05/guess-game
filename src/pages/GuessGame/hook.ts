@@ -15,7 +15,7 @@ export const useModal = () => {
 
     return {
         open: isGuessed,
-        guessCount,
         handleClose,
+        body: `Number of guesses: ${guessCount}`
     }
 }
