@@ -1,9 +1,14 @@
 import React, { useState, useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 import { isNumeric, isStringUnique } from '../../const/helpers'
+import { actionsGuessGame } from '../../redux/guess/actions'
 
 export const useNumericInput = () => {
   const [value, setValue] = useState<string>('')
-  const guess = () => console.log('guess')
+  const dispatch = useDispatch()
+
+  const guess = useCallback(() => dispatch(actionsGuessGame.setInput(value)), [dispatch, value]);
+
   const validate = useCallback((event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
     const num = event.target.value
     if (num === '') setValue(num)
