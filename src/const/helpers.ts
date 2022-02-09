@@ -17,8 +17,8 @@ export const isNumeric = (str: string): boolean => {
     return !isNaN(+str) && !isNaN(parseFloat(str))
 }
 
-export const isStringUnique = (numberString: string, num: number): boolean => {
-    return false
+export const isStringUnique = (numberString: string): boolean => {
+    return new Set(numberString).size === numberString.length;
 }
 
 const compare = (codeArray: number[], inputString: string): Result[] => {
