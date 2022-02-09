@@ -1,4 +1,6 @@
-import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, useMediaQuery, useTheme } from '@mui/material';
+import {
+    Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle
+} from '@mui/material';
 import React, { memo, useState } from 'react';
 import { Props } from './types'
 

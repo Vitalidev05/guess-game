@@ -18,9 +18,7 @@ export const GuessGame = memo(() => {
                 legend1=" - right number, wrong position"
                 legend2=" - right number, right position"
             />
-            <Box
-                sx={styles.box}
-            >
+            <Box sx={styles.box}>
                 <Box>
                     <NumericInput />
                 </Box>
