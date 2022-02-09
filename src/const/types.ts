@@ -3,7 +3,6 @@ export type ReturnAnyActions<T extends { [key: string]: (...args: any[]) => any 
     PropActions<T>
     >
 
-
 export type Result = {
     value: number,
     isGuess: boolean,
