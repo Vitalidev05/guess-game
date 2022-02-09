@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { memo } from 'react';
 import { DisplayResult } from '../DisplayResult';
 import { NumericInput } from '../NumericInput';
 
-export const GuessGame = () => {
+export const GuessGame = memo(() => {
 
     return (
         <Box sx={{ p: 3 }}>
@@ -12,4 +12,4 @@ export const GuessGame = () => {
             {/*<GuessedModal />*/}
         </Box>
     );
-}
+});
