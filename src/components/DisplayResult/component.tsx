@@ -1,13 +1,11 @@
 import React, { memo } from 'react';
 import { Box, Typography } from '@mui/material';
-import { useSelector } from 'react-redux';
-import { selectInput } from '../../redux/guess/selectors';
 import { useDisplayResult } from './hook';
 import { Dot } from '../controls/Dot';
 import { styles } from './styles'
 
 export const DisplayResult = memo(() => {
-    const { userNumber, result, code, isGuessed } = useDisplayResult();
+    const { result } = useDisplayResult();
 
     return (
         <Box>
