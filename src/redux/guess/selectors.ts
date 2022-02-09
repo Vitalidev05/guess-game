@@ -8,3 +8,4 @@ export const selectInput = (store: AppState) => store.guessGame.input;
 
 export const selectResult = (store: AppState) => store.guessGame.result;
 
+export const selectIsGuessed = (store: AppState) => store.guessGame.isGuessed;

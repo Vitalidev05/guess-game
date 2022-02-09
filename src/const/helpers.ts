@@ -33,3 +33,6 @@ export const compareAnswer = (codeArray: number[], inputString: string): Result[
         }
     )
 }
+
+export const isRightAnswer = (answerArray: { isRightPosition: boolean }[]) =>
+    answerArray.every(({isRightPosition}) => isRightPosition === true )

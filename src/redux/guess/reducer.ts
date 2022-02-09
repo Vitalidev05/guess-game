@@ -1,10 +1,11 @@
 import { ReturnAnyActions } from "../../const/types";
 import { actionsGuessGame } from "./actions";
 import { ActionsGuessGame } from "../types";
-import {compareAnswer, generateRandomNumbers } from "../../const/helpers";
+import {compareAnswer, generateRandomNumbers, isRightAnswer } from "../../const/helpers";
 
 const generateInitialState = (code: number[]) => ({
     code,
+    isGuessed: false,
     guessCount: 0,
     input: '',
     result: [],
@@ -27,10 +28,12 @@ export const guessGameReducer = (state: State = initialState, action: GuessGameA
             return { ...state, ...generateInitialState(generateRandomNumbers())}
         }
         case ActionsGuessGame.Guess: {
+            const result = compareAnswer(state.code, action.payload)
             return {
                 ...state,
                 input: action.payload,
-                result: compareAnswer(state.code, action.payload)
+                result,
+                isGuessed: isRightAnswer(result),
             }
         }
         default: return state;
