@@ -12,7 +12,6 @@ export const DisplayResult = memo(() => {
 
     return (
         <Box>
-            userNumber: {userNumber}
         </Box>
     );
 });
