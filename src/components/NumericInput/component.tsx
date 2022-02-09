@@ -6,6 +6,8 @@ import { styles } from "./style";
 export const NumericInput = memo(() => {
     const { guess, value, validate } = useNumericInput()
 
+    console.log('value', value)
+
     return (
         <Box sx={styles.inputContainer}>
             <TextField

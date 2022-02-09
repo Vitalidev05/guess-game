@@ -8,22 +8,23 @@ export const useNumericInput = () => {
   const dispatch = useDispatch()
 
   const guess = useCallback(() => {
-    dispatch(actionsGuessGame.guess(value))
-    dispatch(actionsGuessGame.incrementGuessCount())
-  }, [dispatch, value]);
+    dispatch(actionsGuessGame.guess(value));
+    dispatch(actionsGuessGame.incrementGuessCount());
+    setValue('');
+  }, [dispatch, value, setValue]);
 
   const validate = useCallback((event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
-    const num = event.target.value
-    if (num === '') setValue(num)
-    if (num.length > 4) return
-    if (!isNumeric(num)) return
-    if (!isStringUnique(num)) return
-    setValue(num)
-  }, [setValue])
+    const num = event.target.value;
+    if (num === '') setValue(num);
+    if (num.length > 4) return;
+    if (!isNumeric(num)) return;
+    if (!isStringUnique(num)) return;
+    setValue(num);
+  }, [setValue]);
 
   return {
     guess,
     value,
     validate,
-  }
-}
+  };
+};
