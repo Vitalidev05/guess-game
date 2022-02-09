@@ -4,9 +4,7 @@ import { useNumericInput } from './hook';
 import { styles } from "./style";
 
 export const NumericInput = memo(() => {
-    const { guess, value, validate } = useNumericInput()
-
-    console.log('value', value)
+    const { guess, value, validate, isDisabled } = useNumericInput()
 
     return (
         <Box sx={styles.inputContainer}>
@@ -18,8 +16,7 @@ export const NumericInput = memo(() => {
                 variant="outlined"
                 value={value}
             />
-            {/* todo separate value.length */}
-            <Button disabled={value.length !== 4} onClick={guess} variant="contained">
+            <Button disabled={isDisabled} onClick={guess} variant="contained">
                 Guess
             </Button>
         </Box>

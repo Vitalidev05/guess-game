@@ -6,26 +6,20 @@ import { useModal } from './hook';
 import { Modal } from '../../components/controls/Modal';
 import { Title } from '../../components/controls/Title';
 import { Legend } from '../../components/controls/Legend';
+import { styles } from './styles'
 
 export const GuessGame = memo(() => {
     const { open, handleClose, body } = useModal()
 
     return (
-        <Box sx={{ p: 3 }}>
+        <Box sx={styles.root}>
             <Title title="Guess Game" />
             <Legend
                 legend1=" - right number, wrong position"
                 legend2=" - right number, right position"
             />
             <Box
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    mt: 6,
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: 2,
-                }}
+                sx={styles.box}
             >
                 <Box>
                     <NumericInput />
@@ -35,7 +29,7 @@ export const GuessGame = memo(() => {
                 </Box>
             </Box>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 6 }}>
+            <Box sx={styles.button}>
                 <Button onClick={() => handleClose()} variant="outlined">
                     Start new game!
                 </Button>

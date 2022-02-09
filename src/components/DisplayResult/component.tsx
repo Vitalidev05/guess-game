@@ -4,38 +4,22 @@ import { useSelector } from 'react-redux';
 import { selectInput } from '../../redux/guess/selectors';
 import { useDisplayResult } from './hook';
 import { Dot } from '../controls/Dot';
+import { styles } from './styles'
 
 export const DisplayResult = memo(() => {
     const { userNumber, result, code, isGuessed } = useDisplayResult();
-    console.log('code', code);
 
     return (
         <Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Box sx={styles.root}>
                 <Typography variant="h5">Result:</Typography>
             </Box>
 
-            <Box sx={{
-                border: '1px solid black',
-                borderRadius: 3,
-                minHeight: 150,
-                display: 'flex',
-                minWidth: { xs: 200, sm: 300 },
-                maxWidth: 300,
-                justifyContent: 'space-between',
-                px: 3,
-                alignItems: 'center',
-                gap: 2,
-            }}>
+            <Box sx={styles.box}>
                 {result?.map(({ value, isGuess, isRightPosition }) => (
                     <Box
                         key={value}
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            flexDirection: 'column',
-                            pt: 2,
-                        }}
+                        sx={styles.container}
                     >
                         {isGuess && !isRightPosition && <Dot color="dark" />}
                         {isRightPosition && <Dot color="light" />}

@@ -6,6 +6,7 @@ import { actionsGuessGame } from '../../../redux/guess/actions'
 export const useNumericInput = () => {
   const [value, setValue] = useState<string>('')
   const dispatch = useDispatch()
+  const isDisabled = value?.length !== 4
 
   const guess = useCallback(() => {
     dispatch(actionsGuessGame.guess(value));
@@ -26,5 +27,6 @@ export const useNumericInput = () => {
     guess,
     value,
     validate,
+    isDisabled,
   };
 };
