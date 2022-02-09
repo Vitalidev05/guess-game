@@ -3,7 +3,7 @@ import { actionsGuessGame } from "./actions";
 import { ActionsGuessGame } from "../types";
 import {compareAnswer, generateRandomNumbers, isRightAnswer } from "../../const/helpers";
 
-const generateInitialState = (code: number[]) => ({
+export const generateInitialState = (code: number[]) => ({
     code,
     isGuessed: false,
     guessCount: 0,
