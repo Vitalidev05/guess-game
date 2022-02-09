@@ -3,6 +3,6 @@ import { GuessGame } from './components/GuessGame';
 
 export const App = memo(() => {
   return (
-      <GuessGame/>
+      <GuessGame />
   );
 })

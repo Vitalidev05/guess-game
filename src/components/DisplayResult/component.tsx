@@ -17,10 +17,12 @@ export const DisplayResult = memo(() => {
                 borderRadius: 3,
                 minHeight: 150,
                 display: 'flex',
+                minWidth: 200,
                 maxWidth: 300,
                 justifyContent: 'space-between',
                 px: 3,
                 alignItems: 'center',
+                gap: 2,
             }}>
                 {result?.map(({ value, isGuess, isRightPosition }) => (
                     <Box

@@ -17,7 +17,14 @@ export const GuessGame = memo(() => {
                 legend1=" - right number, wrong position"
                 legend2=" - right number, right position"
             />
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 6, flexWrap: 'wrap' }} >
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                mt: 6,
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: 'center',
+            }}
+            >
                 <Box sx={{ flex: 1 }}>
                     <NumericInput />
                 </Box>
