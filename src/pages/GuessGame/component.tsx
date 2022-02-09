@@ -23,15 +23,15 @@ export const GuessGame = memo(() => {
                     display: 'flex',
                     justifyContent: 'center',
                     mt: 6,
-                    flexDirection: { xs: 'column', sm: 'row' },
+                    flexDirection: 'column',
                     alignItems: 'center',
+                    gap: 2,
                 }}
             >
-                <Box sx={{ flex: 1 }}>
-                    {/* todo rename*/}
+                <Box>
                     <NumericInput />
                 </Box>
-                <Box sx={{ flex: 1 }}>
+                <Box>
                     <DisplayResult />
                 </Box>
             </Box>
