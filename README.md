@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# About Guess-Game
+'Guess-Game' is a game where you have to guess a four-digit secret number selected by a computer. The number consists of
+digits from 0 to 9, no digit must be repeated.
+
+This number must be guessed by the method of gradual attempts. An attempt consists of a suggested number you choose and
+the computer's answer. He must indicate how many numbers are guessed that are in their place and how many are in
+another place.
+
+Using the information from the computer's answer, you must guess the number in the minimum number of moves. Good luck!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -38,9 +48,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
