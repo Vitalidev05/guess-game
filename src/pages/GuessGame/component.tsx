@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Box, Button } from '@mui/material';
-import { DisplayResult } from '../../components/DisplayResult';
-import { NumericInput } from '../../components/controls/NumericInput';
+import { DisplayResult } from '../../components/blocks/DisplayResult';
+import { NumericInput } from '../../components/blocks/NumericInput';
 import { useModal } from './hook';
 import { Modal } from '../../components/controls/Modal';
 import { Title } from '../../components/controls/Title';

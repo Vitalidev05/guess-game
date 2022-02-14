@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useDisplayResult } from './hook';
-import { Dot } from '../controls/Dot';
+import { Dot } from '../../controls/Dot';
 import { styles } from './styles'
 
 export const DisplayResult = memo(() => {

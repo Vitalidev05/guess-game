@@ -1,15 +1,8 @@
 import { ReturnAnyActions } from "../../const/types";
 import { actionsGuessGame } from "./actions";
 import { ActionsGuessGame } from "../types";
-import {compareAnswer, generateRandomNumbers, isRightAnswer } from "../../const/helpers";
-
-export const generateInitialState = (code: number[]) => ({
-    code,
-    isGuessed: false,
-    guessCount: 0,
-    input: '',
-    result: [],
-})
+import { compareAnswer, generateRandomNumbers, isRightAnswer } from "../../const/helpers";
+import { generateInitialState } from '../utils'
 
 export const initialState = generateInitialState(generateRandomNumbers())
 
